@@ -3,12 +3,15 @@ const express = require('express');
 const { randomBytes } = require('crypto');
 //Body Parser for returning the json representation
 const bodyParser = require('body-parser')
+const cors = require('cors')
 // app.use(bodyParser.json()) <- Cannot use app before initialization
 
 //Initialize the application
 const app = express()
 
 app.use(bodyParser.json()) //Use Here
+
+app.use(cors()) // Cors constructor
 
 // Dummy Posts
 const posts = {}
