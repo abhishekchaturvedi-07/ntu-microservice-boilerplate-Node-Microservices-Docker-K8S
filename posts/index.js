@@ -4,6 +4,7 @@ const { randomBytes } = require('crypto');
 //Body Parser for returning the json representation
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const axios = require('axios')
 // app.use(bodyParser.json()) <- Cannot use app before initialization
 
 //Initialize the application
@@ -20,14 +21,26 @@ const posts = {}
 app.get('/posts', (req, res)=>{
     res.send(posts)
 })
-app.post('/posts', (req, res) => {
+app.post('/posts', async (req, res) => {
     const id = randomBytes(4).toString('hex')
     const {title} = req.body
     posts[id] = {
         id:id,
         title: title,
     }
+    // sending to event-bus that post has been created
+    await axios.post('http://localhost:4005/events',{
+        type: 'PostCreated',
+        data: {
+            id, title
+        }
+    })
     res.status(200).send(posts[id])
+})
+
+app.post('/events', (req,res) => {
+    console.log('Event Received : ', req.body.type)
+    res.send({})
 })
 
 //Listening
