@@ -10,20 +10,20 @@ const PostList = () => {
 
     useEffect(()=>{
         const fetchPosts = async () => { 
-            const res = await axios.get('http://localhost:4000/posts') 
-            // const res = await axios.get('http://localhost:4002/posts')
+            // const res = await axios.get('http://localhost:4000/posts') 
+            const res = await axios.get('http://localhost:4002/posts')
             // console.log('data- ', res.data)
             setPosts(res.data)
         }
         fetchPosts()
     },[])
-    console.log(posts)
+    // console.log(posts)
 
     const renduredPosts = Object.values(posts).map((post)=>{
         return(
             <div key={post.id} className='min-h-[50%]  w-3/12 ' >
                 <h1>Post no : {post.id }</h1>
-                <div className="   bg-black h-[auto] m-10   min-h-full  h-[300px] " >
+                <div className="   bg-black  m-10   min-h-full  h-[300px] " >
                     <div className='w-full bg-slate-600 border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50 text-center text-purple-200  '>
                         {post.id}
                     </div>
@@ -33,7 +33,7 @@ const PostList = () => {
                     </div>
 
                     <div>
-                        <CommentList postId={post.id}/>
+                        <CommentList comments={post.comments}/>
                         <CommentCreate postId={post.id}/>
                     </div>
                 </div>
