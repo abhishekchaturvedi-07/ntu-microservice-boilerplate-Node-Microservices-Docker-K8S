@@ -45,6 +45,6 @@ app.post('/events', (req,res) => {
 
 //Listening
 app.listen(4000, () => {
-    console.log('MEthod 1 checking to update the K8S Deployment ')
+    console.log('MEthod 2 checking to update the K8S Deployment!!')
     console.log('Server running on port 4000')
 })

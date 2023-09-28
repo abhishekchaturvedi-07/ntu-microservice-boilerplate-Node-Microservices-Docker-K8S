@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: posts
-        image: codewithac/posts:0.0.2
+        image: codewithac/posts
         # resources:
         #   limits:
         #     memory: "128Mi"
