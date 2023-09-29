@@ -36,6 +36,6 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: comments-srv
+                name: client-srv
                 port:
-                  number: 4001
+                  number: 3000

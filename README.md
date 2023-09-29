@@ -1,5 +1,9 @@
 # ntu-microservice-boilerplate
-1- Created 3 folder 
-a)- Client - With - Create react app with npx-create-app
-b)- Posts - With - for - Create and List with Npm init - y
-b)- Comments - With - for - Create and List with Npm init - y
+- Can use as Boilerplate for different microservices
+- Configuration enabled for the creation and pushing the Dcoker images to the hub
+- Configuration enabled for the Kubernetes Cluster creation of deployment and service files of all the services
+- Configuration enabled for the ClusterIP service of all the microservices
+- Configuration enabled for the Ingress Controller (routing mechanism) for all the services
+- Integration enabled for Load Balancer with the Ingress Controller
+- Configuration done for the React App Dev Server
+- Integration done for the React App Dev Server with different microservices
