@@ -12,4 +12,4 @@
 - Introducing Automation Tool for this process just for the development environment
 - SKAFFOLD (skaffold.dev) - Automate many task in K8S DEV environment. Also, makes the job easy to update the code in running POD. Also able to create/delete all objects tied to project at once
 - SKAFFOLD -> Runs outside the cluster
-- Run the command - skaffold dev
+- Run the command - skaffold dev | skaffold dev -v DEBUG
