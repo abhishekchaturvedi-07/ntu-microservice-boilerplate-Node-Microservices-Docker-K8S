@@ -11,3 +11,4 @@
 - Current Issue - Whenever do any change, need to build the new image of the microservice, push it to the docker hub and then run the kubectl rollout restart deployment <deployment_name> command, which is a headache, lets work on the solution for this issue
 - Introducing Automation Tool for this process just for the development environment
 - SKAFFOLD (skaffold.dev) - Automate many task in K8S DEV environment. Also, makes the job easy to update the code in running POD. Also able to create/delete all objects tied to project at once
+- SKAFFOLD -> Runs outside the cluster
