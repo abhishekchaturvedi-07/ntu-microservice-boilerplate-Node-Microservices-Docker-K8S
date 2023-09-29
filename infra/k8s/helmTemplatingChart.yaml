@@ -1,0 +1,34 @@
+# Very uselful for CI/CD -> Replace the values on the fly
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: {{ .Values.name }}
+spec: 
+  containers: 
+  - name: {{ .Values.container.name }}
+    image: {{ .Values.container.image }}
+    port: {{ .Values.container.port }}
+
+
+    ## These values will be coming from values.yaml
+    # name: my-app-name
+    # container: 
+    #   name: my-app-container-name
+    #   image: my-app-image-name
+    #   port: 9001
+
+# HELM Architecture
+# mychart /
+#   Chart.yaml
+#   values.yaml
+#   charts/
+#   templates/
+#  /README.md
+#  LICENCSE
+#   ...
+
+# helm install <chartname>
+# Override values : 
+# helm install --values=MY_VALUES.YAML <chartname>
+# helm install --set version=2.0.0
