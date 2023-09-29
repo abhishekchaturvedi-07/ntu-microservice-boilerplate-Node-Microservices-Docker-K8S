@@ -1,6 +1,10 @@
 # Base Image
 FROM node:alpine
 
+# Add the following lines
+ENV CI=true
+ENV WDS_SOCKET_PORT=0
+
 # Working Directory
 WORKDIR /app
 
