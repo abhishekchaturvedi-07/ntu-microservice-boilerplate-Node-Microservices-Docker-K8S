@@ -6,7 +6,7 @@ import PostList from "./PostList";
 const App = () => {
   return(
   <>
-    <h1>Blog Apps</h1>
+    <h1>MicroService with Docker & K8S Apps</h1>
     <PostCreate />  
     <PostList />
   </>

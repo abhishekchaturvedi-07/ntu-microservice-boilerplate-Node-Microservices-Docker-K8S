@@ -12,4 +12,6 @@
 - Introducing Automation Tool for this process just for the development environment
 - SKAFFOLD (skaffold.dev) - Automate many task in K8S DEV environment. Also, makes the job easy to update the code in running POD. Also able to create/delete all objects tied to project at once
 - SKAFFOLD -> Runs outside the cluster
-- Run the command - skaffold dev | skaffold dev -v DEBUG
+- Run the command - skaffold dev (N) | skaffold dev -v DEBUG (Y)
+- When you STOP the skaffold by just hittting Ctrl + C | Cmd + C -> it will delete all the K8S pods| deployments | services associated with the application
+- Done with this beautiful little microservice with react application! Cheers!
