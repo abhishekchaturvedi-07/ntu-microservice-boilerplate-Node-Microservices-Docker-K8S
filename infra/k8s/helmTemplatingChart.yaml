@@ -1,14 +1,14 @@
 # Very uselful for CI/CD -> Replace the values on the fly
 
-apiVersion: v1
-kind: Pod
-metadata: 
-  name: {{ .Values.name }}
-spec: 
-  containers: 
-  - name: {{ .Values.container.name }}
-    image: {{ .Values.container.image }}
-    port: {{ .Values.container.port }}
+# apiVersion: v1
+# kind: Pod
+# metadata: 
+#   name: {{ .Values.name }}
+# spec: 
+#   containers: 
+#   - name: {{ .Values.container.name }}
+#     image: {{ .Values.container.image }}
+#     port: {{ .Values.container.port }}
 
 
     ## These values will be coming from values.yaml
