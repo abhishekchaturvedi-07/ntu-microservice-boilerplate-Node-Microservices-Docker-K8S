@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: query-depl
+spec:
+  selector:
+    matchLabels:
+      app: query
+  template:
+    metadata:
+      labels:
+        app: query
+    spec:
+      containers:
+      - name: query
+        image: codewithac/query
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
+        # ports:
+        # - containerPort: <Port>
+
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: query-srv
+spec:
+  selector:
+    app: query
+  type: ClusterIP
+  ports: 
+    - name: query
+      protocol: TCP
+      port: 4002
+      targetPort: 4002
