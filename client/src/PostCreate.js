@@ -7,7 +7,7 @@ const PostCreate = () => {
     const handleSubmit = async (e) => {
        e.preventDefault();
        alert("Submitting...")
-       await axios.post('http://posts.com/posts', {title})
+       await axios.post('http://posts.com/posts/create', {title})
        setTitle('New Title')
     }
     return(
