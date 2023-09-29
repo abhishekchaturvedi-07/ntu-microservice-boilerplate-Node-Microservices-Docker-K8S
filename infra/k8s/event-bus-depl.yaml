@@ -35,3 +35,8 @@ spec:
       protocol: TCP
       port: 4005
       targetPort: 4005
+
+
+# https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
+# kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
+# Installed the ingress nginx controller and services for the cluster 
