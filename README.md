@@ -1,4 +1,7 @@
 # ntu-microservice-boilerplate
+
+*#react #docker #kubernetes #skaffold #microservice #eventbus #pods #containers #services #deployment #ingress-nginx #loadbalancer #clusterip #nodeport*
+
 - Can use as Boilerplate for different microservices
 - Configuration enabled for the creation and pushing the Dcoker images to the hub
 - Configuration enabled for the Kubernetes Cluster creation of deployment and service files of all the services
@@ -15,4 +18,4 @@
 - Run the command - skaffold dev (N) | skaffold dev -v DEBUG (Y)
 - When you STOP the skaffold by just hittting Ctrl + C | Cmd + C -> it will delete all the K8S pods| deployments | services associated with the application
 - Done with this beautiful little microservice with react application! Cheers!
-#react #docker #kubernetes #skaffold #microservice #eventbus #pods #containers #services #deployment #ingress-nginx #loadbalancer #clusterip #nodeport
+
